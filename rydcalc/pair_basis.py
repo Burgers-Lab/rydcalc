@@ -1,4 +1,5 @@
 import scipy as sp
+import math
 
 from rydcalc import *
 
@@ -548,7 +549,7 @@ class pair_basis:
         
         #return -unit_scale * np.sqrt(24*np.pi/5) * 1/r**(3) * np.conjugate(sp.special.sph_harm(qtot,2,phi,th))
         
-        number_factor = (4*np.pi)**3 * np.math.factorial(2*mm[0] + 2*mm[1]) / ( np.math.factorial(2*mm[0]+1) * np.math.factorial(2*mm[1]+1) * (2*mm[0] + 2*mm[1] + 1) )
+        number_factor = (4*np.pi)**3 * math.factorial(2*mm[0] + 2*mm[1]) / ( math.factorial(2*mm[0]+1) * math.factorial(2*mm[1]+1) * (2*mm[0] + 2*mm[1] + 1) )
         number_factor *= (2*mm[0]+1)/(4*np.pi)*(2*mm[1]+1)/(4*np.pi)
         
         # number_factor values
